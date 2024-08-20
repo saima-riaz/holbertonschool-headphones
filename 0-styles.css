@@ -1,0 +1,124 @@
+/* Define CSS variables */
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #FF6565;
+    --dark-secondary-color: #FF3333;
+    --font-size-small: 12px;
+    --font-size-medium: 16px;
+    --font-size-large: 32px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --line-height: 26px;
+    --header-padding: 40px 150px;
+    --logo-height: 32px;
+    --paragraph-width: 637px;
+}
+
+/* Global style */
+* {
+    font-family: var(--font-family);
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Background */
+body {
+    background-image: url(images/headphones_hero_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Header link and logo */
+.header-container {
+    padding: var(--header-padding);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: var(--logo-height);
+    margin-right: 30px;
+}
+
+.nav {
+    align-items: center;
+    display: flex;
+}
+
+.nav-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: var(--font-size-small);
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none; /* Hide menu button by default */
+}
+
+.menu-icon {
+    display: none; /* Hide menu icon by default */
+}
+
+/* Main heading part */
+.heading {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.heading h2 {
+    padding: 16rem 0;
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
+    padding-bottom: 0;
+}
+
+.heading p {
+    text-align: center;
+    padding: 5px;
+    font-size: var(--font-size-medium);
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.paragraph {
+    font-size: var(--font-size-medium);
+    color: var(--primary-color);
+    width: var(--paragraph-width);
+    font-weight: normal;
+    margin: 0 auto;
+    margin-top: 4rem;
+    line-height: var(--line-height);
+}
+
+.btn {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    font-size: 14px;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 25px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.9;
+    
+    
+}
+
+.btn:active {
+    background: var(--dark-secondary-color);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
