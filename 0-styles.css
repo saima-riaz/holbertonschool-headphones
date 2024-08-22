@@ -1,124 +1,205 @@
-/* Define CSS variables */
-:root {
-    --primary-color: #FFFFFF;
-    --secondary-color: #FF6565;
-    --dark-secondary-color: #FF3333;
-    --font-size-small: 12px;
-    --font-size-medium: 16px;
-    --font-size-large: 32px;
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --line-height: 26px;
-    --header-padding: 40px 150px;
-    --logo-height: 32px;
-    --paragraph-width: 637px;
-}
-
-/* Global style */
+/*===== Global style =====*/
 * {
-    font-family: var(--font-family);
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;  
 }
 
-/* Background */
+html {
+    scroll-behavior: smooth;  
+}
+
+/*===== Background ======*/
+
 body {
     background-image: url(images/headphones_hero_1.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
-    height: 100vh;
+    height: 99vh 0;
     position: relative;
 }
 
-/* Header link and logo */
-.header-container {
-    padding: var(--header-padding);
-}
-
-.header {
+/*===== Header =====*/
+header div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
+    color: #FFFFFF;
 }
 
-.logo {
-    height: var(--logo-height);
-    margin-right: 30px;
+/*===== Logo =====*/
+header div a {
+    color: white;
+    margin-top: 20px;
+}
+    
+header div a img {
+    width: 150px; /* Default logo size */
+    height: auto;
+}
+
+/* ======= Navbar ======*/
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .nav {
-    align-items: center;
+    list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 10px;
+    font-weight: bold;
+
 }
 
 .nav-link {
-    color: var(--primary-color);
+    color: white;  
     font-weight: bold;
-    padding: 0 10px;
-    font-size: var(--font-size-small);
+    font-size: 16px;
 }
 
-.nav-link:hover {
-    color: var(--secondary-color);
+.nav-item a:hover {
+    color: #33eeff; 
+}
+
+/*====== humburger Icon ====*/
+.menu-btn {
+    display: none;
+}
+.menu-icon {
+    display: none;
     cursor: pointer;
 }
 
-.menu-btn {
-    display: none; /* Hide menu button by default */
+.menu-icon .navicon {
+    background-color: #FFFFFF;
+    width: 25px;
+    height: 3px;
+    display: block;
+    margin: 5px 0;
+    transition: all 0.3s ease; /* Smooth transition for animation */
 }
 
-.menu-icon {
-    display: none; /* Hide menu icon by default */
+
+/* Cross (X) Icon 
+.menu-icon.cross .navicon:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
-/* Main heading part */
-.heading {
+.menu-icon.cross .navicon:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+/*} 
+
+.menu-icon.cross .navicon:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}*/
+
+/*===== Responsive: Show humburger menu on moble =====*/
+@media (max-width: 480px) {
+    header div {
+        flex-direction: row-reverse;
+    }
+    .menu-icon {
+        display: block;
+        order: 1;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 140px;
+    }
+
+    .nav-item {
+        margin: 20px 0;
+    }
+/* Show menu when checkbox is checked */
+    .menu-btn:checked ~ .navbar-menu .nav {
+        display: flex;
+    }
+}
+/*==== media for when screen is 1000px ====*/
+@media (max-width: 1000px) {
+    .nav-item a:hover {
+        color: #FF6565; /* Change color when centered */
+    }
+}
+
+/*===== Main heading part ======*/
+
+.hero {
+    height: 45vh;
     text-align: center;
-    color: var(--primary-color);
+    color: #FF6565;
+    margin-top: 5vh;
 }
 
-.heading h2 {
-    padding: 16rem 0;
-    font-size: var(--font-size-large);
-    color: var(--primary-color);
-    padding-bottom: 0;
+.hero h2 {
+    margin-bottom: 0;
+    margin-top: 30vh;
+    color: #FFFFFF;
+    font-size: 30px;
 }
 
-.heading p {
+.hero p {
     text-align: center;
     padding: 5px;
-    font-size: var(--font-size-medium);
+    font-size: 16px;
     margin-bottom: 40px;
-    color: var(--primary-color);
+    color: #FFFFFF;
 }
-
 .paragraph {
-    font-size: var(--font-size-medium);
-    color: var(--primary-color);
-    width: var(--paragraph-width);
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 700px;
     font-weight: normal;
     margin: 0 auto;
-    margin-top: 4rem;
-    line-height: var(--line-height);
+    margin-top: 2rem;
+    line-height: 26px;
+}
+/* Media query for screens 480px or less */
+@media (max-width: 480px) {
+    .paragraph {
+        width: auto;
+    
+    } 
 }
 
-.btn {
-    color: var(--primary-color);
-    background: var(--secondary-color);
+.hero button {
+    color: #FFFFFF;
+    background: #FF6565;
     font-size: 14px;
+    font-weight: 510;
     border-radius: 20px;
     border: 0;
-    padding: 10px 25px;
+    padding: 15px 25px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     text-align: center;
-    opacity: 0.9;
-    
-    
 }
 
-.btn:active {
-    background: var(--dark-secondary-color);
+.hero button:hover:active {
+    background: #FF3333;
     box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
 }

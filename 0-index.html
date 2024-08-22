@@ -2,43 +2,49 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Headphones</title>
-        <link rel="stylesheet" href="0-styles.css">
+        <link rel="stylesheet" href="05-styles.css">
     </head>
     <body>
+        <header>
+            <div>
+                <a href="#">
+                    <img src="images/logo_headphones.png" alt="logo">
+            
+                </a>
+                 <!-- Invisible checkbox -->
+                 <input class="menu-btn" type="checkbox" id="menu-btn">
+                 <!-- Label with an empty span -->
+                 <label for="menu-btn" class="menu-icon">
+                    <span class="navicon"></span>
+                    <span class="navicon"></span>
+                    <span class="navicon"></span>
+                </label>
+                <nav class="navbar-menu">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#">What We Do</a></li>
+                        <li class="nav-item"><a href="#">Our Results</a></li>
+                        <li class="nav-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <main>
-            <section>
-                <header class="header-container">
-                    <div class="header">
-                        <img src="images/logo_headphones.png" alt="logo" class="logo">
-                        <ul class="nav">
-                        <a class="nav-link" href="#">What we do</a>
-                        <a class="nav-link" href="#">Our result</a>
-                        <a class="nav-link" href="#">Contact us</a>
-                       </ul>
-                       <input class="menu-btn" type="checkbox", id="menu-btn" />
-                       <label class="menu-icon" for="menu-btn"></label>
-                    </div>
-                    </header>
-                    <div class="heading">
-                       <h2>Lorem ipsum dolor set amet lorem ipsum</h2>
-                       <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
-                       <button class="btn" type="button">CALL TO ACTION</button>
-                       <p class="paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur.</p>
-                    </div>
-                
+            <section class="hero">
+                <h2>Lorem ipsum dolor set amet lorem ipsum</h2>
+                <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+                <button class="btn" type="button">CALL TO ACTION</button>
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur.
+                </p>         
             </section>
-
-        </main>
-        
+        </main> 
     </body>
-
-</html>
+    </html>
