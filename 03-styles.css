@@ -1,0 +1,419 @@
+/*===== Global style =====*/
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+html {
+    scroll-behavior: smooth;  
+}
+/*===== Background ======*/
+body {
+    background-image: url(images/headphones_hero_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    position: relative;
+}
+/*===== Header =====*/
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fffdfd;
+    padding-top: 2rem;
+    padding-left: 1rem; /* Added padding for spacing */
+    padding-right: 1rem;
+}
+/*===== Logo =====*/
+header div a {
+    color: white;
+    margin-left: 1cm;
+    margin-top: 0.5rem;/* Add space between logo and other items */
+}   
+header div a img {
+    width: 150px; /* Default logo size */
+    height: auto;
+    max-width: 100%;    
+}
+/*==== Media query for tablet devices (768px and below) =====*/
+@media screen and (max-width: 768px) {
+    header div {
+        padding-left: 1rem; 
+        padding-right: 1rem; 
+    }
+    header div a {
+        margin-left: 0.5rem; 
+    }
+    header div a img {
+        width: 120px; /* Smaller logo size for tablets */
+    }
+}
+/*==== Media query for mobile devices (480px and below) =====*/
+@media screen and (max-width: 480px) {
+    header div {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; 
+        padding-left: 1.5rem; 
+        padding-right: 1.5rem; 
+        padding-top: 1rem; 
+    }
+    header div a {
+        margin-left: 0; 
+        margin-top: 1rem; 
+    }
+    header div a img {
+        width: 100px;
+    }
+}
+
+/* ======= Navbar ======*/
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 60px;  
+}
+.nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    margin: 0 4px;
+    font-weight: bold;
+
+}
+.nav-link {
+    color: white;  
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-item a:hover {
+    color: #ff6d33; 
+}
+
+/*====== humburger Icon ====*/
+.menu-btn {
+    display: none;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+.menu-icon .navicon {
+    background-color: #FFFFFF;
+    width: 25px;
+    height: 3px;
+    display: block;
+    margin: 5px 0;
+    transition: all 0.3s ease; /* Smooth transition for animation */
+}
+
+/* Cross (X) Icon 
+.menu-icon.cross .navicon:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-icon.cross .navicon:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+/*} 
+
+.menu-icon.cross .navicon:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}*/
+
+/*==== Media query for mobile devices (480px and below) =====*/
+@media (max-width: 480px) {
+    header div {
+        flex-direction: row-reverse;
+    }
+    .menu-icon {
+        display: block;
+        order: 1;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 140px;
+    }
+
+    .nav-item {
+        margin: 20px 0;
+    }
+/* Show menu when checkbox is checked */
+    .menu-btn:checked ~ .navbar-menu .nav {
+        display: flex;
+    }
+}
+/*==== media for when screen is 1000px ====*/
+@media (max-width: 1000px) {
+    .nav-item a:hover {
+        color: #FF6565; /* Change color when centered */
+    }
+}
+/*===== Main heading part ======*/
+.hero {
+    height: 45vh;
+    text-align: center;
+    color: #FF6565;
+    margin-top: 5vh;
+}
+.hero h2 {
+    margin-bottom: 0;
+    margin-top: 30vh;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.hero p {
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+}
+.paragraph {
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 700px;
+    font-weight: normal;
+    margin: 0 auto;
+    margin-top: 2rem;
+    line-height: 26px;  
+}
+/*==== Media query for mobile devices (480px and below) =====*/
+@media (max-width: 480px) {
+    .paragraph {
+        width: 300px;   
+    } 
+}
+.hero button {
+    color: #FFFFFF;
+    background: #FF6565;
+    font-size: 14px;
+    font-weight: 510;
+    border-radius: 20px;
+    border: 0;
+    padding: 15px 25px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+}
+.hero button:hover:active {
+    background: #FF3333;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+/*===What we do..." section==*/
+
+.wwd-title {
+    text-align: center;
+    margin: 0 auto;
+}
+.wwd-title h1 {
+    line-height: 37.5px;
+    font-size: 32px;
+    width: 100%; /* Allow the heading to be centered fully */
+    padding-top: 150px;
+}
+.wwd-title p {
+    font-size: 16px;
+    color:#071629;
+    width: 700px;
+    font-weight: normal;
+    margin: 0 auto;
+    margin-top: 2rem;
+    line-height: 26px;
+    max-width: 700px;   
+}
+/*==== Media query for tablet devices (768px and below) =====*/
+@media screen and (max-width: 768px){
+    .wwd-title h1 {
+        font-size: 28px;
+        padding-top: 100px;
+    }
+    .wwd-title p {
+        font-size: 14px;
+        width: 90%;
+        max-width: 600px;
+        line-height: 24px;
+    }
+}
+/*==== Media query for mobile devices (480px and below) =====*/
+@media screen and (max-width: 480px) {
+    .wwd-title h1 {
+        font-size: 24px;
+        padding: 60px;
+    }
+    .wwd-title p {
+        font-size: 12px;
+        width: 90%;
+        max-width: 100%;
+        line-height: 20px;
+        margin-top: 1em;
+    }
+}
+
+/*===section elements of what we do ===*/
+
+/* Container for all blocks */
+.container {
+    display: flex;
+    padding: 90px;
+    justify-content: flex-start;/* Adjusts spacing between blocks to fit the row */ 
+    gap: 5rem;
+    opacity: 1px;
+    margin-left: 70px; 
+    flex-wrap: nowrap;
+    background-color: #FFFFFF; 
+}
+.element-icon {
+    display: flex;
+    flex-direction: column; /* Stack items vertically in each block */
+    width: calc(50% - 2.5rem);
+    align-items: center; /* Align items to the left */
+
+    text-align: center;
+}
+
+/* Image styles */
+.element-icon span {
+    /*display: block;*/
+    margin-bottom: 15px;
+}
+/* Title and subtitle styles */
+.element-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.small-title {
+    font-size: 14px;
+    text-align: center; 
+}
+/*==== Media query for tablet devices (768px and below) =====*/
+@media screen and (max-width: 768px) {
+    .element-icon {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+       /*width: 100%;
+       max-width: 472px;*/
+    }
+    .container{
+        width: calc(50%- 1rem);
+        /*justify-content: center;
+        gap: 2rem;*/
+    }
+}
+/*==== Media query for mobile devices (480px and below) =====*/
+@media (max-width: 480px) {
+    .container {
+        padding: 45px; 
+        margin-left: 15px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .element-icon{
+        width: 100%;
+        max-width: 207px;
+    }
+}
+
+/*=====Our results speak for themselves */
+.background-speak {
+    background-image: url(images/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+
+}
+.title-spe h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+    padding-top: 9rem;
+
+}
+.title-spe p {
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 700px;
+    font-weight: normal;
+    margin: 0 auto;
+    margin-top: 2rem;
+    line-height: 26px;
+    max-width: 700px;   
+}
+.container-spe {
+    display: flex;
+    padding: 90px;
+    justify-content: flex-start;/* Adjusts spacing between blocks to fit the row */ 
+    gap: 5rem;
+    opacity: 1px;
+    margin-left: 70px;
+    flex-wrap: nowrap;
+}
+
+/*==== Media query for tablet devices (768px and below) =====*/
+@media screen and (max-width: 768px) {
+    .title-spe h1 {
+        font-size: 28px;
+        padding-top: 7rem;
+    }
+
+    .title-spe p {
+        width: 100%;
+        max-width: 600px;
+        font-size: 14px;
+    }
+
+    .container-spe {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 3rem; /* Reduce the gap between blocks */
+        padding: 60px;
+        margin-left: 0; 
+    }
+}
+
+/*==== Media query for mobile devices (480px and below) =====*/
+@media screen and (max-width: 480px) {
+    .title-spe h1 {
+        font-size: 24px;
+        padding-top: 5rem;
+    }
+
+    .title-spe p {
+        width: 90%;
+        max-width: 90%; /* Allow more space for text on smaller screens */
+        font-size: 14px;
+        line-height: 22px; /* Slightly tighter line-height */
+    }
+
+    .container-spe {
+        flex-direction: column; /* Stack the blocks vertically */
+        align-items: center; 
+        padding: 30px;
+        margin-left: 0; 
+        gap: 2rem; 
+    }
+}
