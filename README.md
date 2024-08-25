@@ -25,8 +25,8 @@ This repository showcases a stylish, responsive landing page designed from scrat
 
 This project is built using the following technologies:
 
-🖼️ HTML5 - Semantic structure of the website.
-🎨 CSS3 - Custom styles and responsive design.
+- HTML5 - Semantic structure of the website.
+- CSS3 - Custom styles and responsive design.
 
 ---
 ### 🖼️ Design Details
