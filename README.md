@@ -59,8 +59,9 @@ This project is licensed under the MIT License.
 
 ---
 
-### 👤 Author
+### 👤 About the Developer
 #### Saima RIAZ
+Building the Headphones Website was a fun and creative journey! I wanted to design a landing page that truly felt like it belonged to a premium headphones brand, combining style with a smooth, user-friendly experience. Starting from scratch, I used HTML5 and CSS3 to make the site look great and work seamlessly on any device. Every section was thoughtfully crafted to feel balanced and inviting, and using Figma to plan out the design helped me stay focused on the big picture while building each component. This project was a chance to really dive into design and bring ideas to life with code—I'm proud of how it turned out and hope it’s a site people enjoy exploring!
 
 ---
 
@@ -72,13 +73,3 @@ Have questions, feedback, or just want to say hi? Feel free to reach out!
 --- 
 
 🌟 Thank you for visiting our project! 🌟
-
-
-
-
-
-
-
-
-
-
